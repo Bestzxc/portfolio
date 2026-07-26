@@ -1,8 +1,3 @@
-// render.js
-// Standard approach: this file reads values from "data" (defined in data.js)
-// and inserts them into the matching elements in index.html by their id.
-// data.js is never touched by this file — it only ever holds data.
-
 document.addEventListener('DOMContentLoaded', () => {
 
   // Hero

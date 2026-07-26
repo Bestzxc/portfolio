@@ -1,8 +1,3 @@
-// data.js
-// This file ONLY stores data. No DOM code, no rendering logic here.
-// index.html pulls values from this object wherever it needs them,
-// using: data.name, data.campus, data.email, etc.
-
 const data = {
 
   // ---- Personal info ----
