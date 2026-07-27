@@ -25,7 +25,7 @@ const data = {
   email: 'bestovered@gmail.com',
   github: 'github.com/Bestzxc',
   line: '0931179686 (best)',
-  phone: '093-117-9686',
+  phone: '061-396-3099',
 
   // ---- Footer ----
   footerNote: 'Thanapol Intasuwan (Use for Cooperative Education)',
