@@ -3,7 +3,7 @@ const data = {
   // ---- Personal info ----
   name: 'Thanapol',
   surname: 'Intasuwan',
-  title: 'Backend Developer / Full Stack Developer',
+  title: 'Full Stack Developer & Backend Develope ',
   status: 'Available',
   avatar: 'assets/profile.jpg',
 
@@ -13,7 +13,7 @@ const data = {
   universityYears: '2023 - present',
   universityGpax: 3.82,
 
-  school: 'Puak Daeng Pittayakom School',
+  school: 'Pluak Daeng Pittayakom School',
   schoolYears: 'Grade 9 - Grade 12',
   schoolGpax: 3.97,
 
