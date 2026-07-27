@@ -22,7 +22,7 @@ const data = {
   projectsCompleted: 9,
 
   // ---- Contact ----
-  email: 'bestovered@gmail.com',
+  email: 'thanapol.in@ku.th',
   github: 'github.com/Bestzxc',
   line: '0931179686 (best)',
   phone: '061-396-3099',
