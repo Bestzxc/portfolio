@@ -19,7 +19,7 @@ const data = {
 
   // ---- Quick stats ----
   favoriteSubjects: 'Programming, Database',
-  projectsCompleted: 9,
+  projectsCompleted: 10,
 
   // ---- Contact ----
   email: 'thanapol.in@ku.th',
@@ -137,6 +137,12 @@ const data = {
       title: 'Network Survey & Design at Mahidol University',
       description: 'Conducted a survey and design of the network infrastructure at Mahidol University, analyzing usage patterns and designing an efficient network structure with full coverage and stable performance.',
       tags: ['Survey', 'Networking']
+    },
+    {
+      id: '010',
+      title: 'Fleet Management System',
+      description: 'Conducted a survey and design of the network infrastructure at Mahidol University, analyzing usage patterns and designing an efficient network structure with full coverage and stable performance.',
+      tags: ['JavaScript', 'React', 'React', 'REST API', 'HTML', 'CSS', 'SQL']
     }
   ],
 
