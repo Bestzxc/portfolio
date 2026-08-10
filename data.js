@@ -141,7 +141,7 @@ const data = {
     {
       id: '010',
       title: 'Fleet Management System',
-      description: 'Conducted a survey and design of the network infrastructure at Mahidol University, analyzing usage patterns and designing an efficient network structure with full coverage and stable performance.',
+      description: 'Developed a web-based fleet management system for managing vehicle information and monitoring fleet operations. Designed the user interface with React and integrated REST APIs to handle data communication with the backend and SQL database.',
       tags: ['JavaScript', 'React', 'React', 'REST API', 'HTML', 'CSS', 'SQL']
     }
   ],
