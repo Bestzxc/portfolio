@@ -382,45 +382,62 @@ section {
 }
 
 .about-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.about-cards {
   display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 6rem;
-  align-items: start;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5px;
+  background: var(--border);
+  border: 1px solid var(--border);
 }
 
-.about-text p {
-  font-size: 1.1rem;
-  line-height: 1.9;
-  color: var(--text-muted);
-  margin-bottom: 1.5rem;
+.about-card {
+  background: var(--bg);
+  padding: 2.4rem;
+  transition: background 0.4s;
 }
 
-.about-text p strong {
-  color: var(--text);
-  font-weight: 500;
+.about-card:hover {
+  background: var(--surface);
 }
 
-.about-text p em {
+.about-card-label {
+  display: block;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
   color: var(--accent);
+  margin-bottom: 1rem;
+}
+
+.about-card-text {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-muted);
 }
 
 .about-stats {
   display: flex;
-  flex-direction: column;
-  gap: 0;
+  flex-wrap: wrap;
   border: 1px solid var(--border);
 }
 
 .stat-item {
+  flex: 1 1 200px;
   padding: 1.8rem 2rem;
-  border-bottom: 1px solid var(--border);
+  border-right: 1px solid var(--border);
   position: relative;
   overflow: hidden;
   transition: background 0.3s;
 }
 
 .stat-item:last-child {
-  border-bottom: none;
+  border-right: none;
 }
 
 .stat-item:hover {
@@ -598,6 +615,29 @@ section {
   overflow: hidden;
   transition: background 0.4s;
   cursor: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.project-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-image {
+  width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  object-position: center;
+  border: 1px solid var(--border);
+  filter: grayscale(40%);
+  transition: filter 0.4s, border-color 0.4s;
+}
+
+.project-card:hover .project-image {
+  filter: grayscale(0%);
+  border-color: rgba(200, 169, 110, 0.3);
 }
 
 .project-card:hover {
@@ -1150,4 +1190,54 @@ footer {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
+}
+/* ── PROJECT IMAGE LIGHTBOX ── */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  z-index: 5000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.lightbox.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  border: 1px solid var(--border);
+  transform: scale(0.96);
+  transition: transform 0.3s;
+}
+
+.lightbox.active .lightbox-img {
+  transform: scale(1);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 2rem;
+  right: 2.5rem;
+  background: none;
+  border: none;
+  color: var(--text);
+  font-size: 2.5rem;
+  line-height: 1;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: color 0.3s;
+}
+
+.lightbox-close:hover {
+  color: var(--accent);
 }

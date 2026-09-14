@@ -63,9 +63,7 @@
       <div class="section-line"></div>
     </div>
     <div class="about-grid">
-      <div class="about-text reveal">
-        <ul class="about-list" id="about-list"></ul>
-      </div>
+      <div class="about-cards reveal" id="about-list"></div>
       <div class="about-stats reveal" id="about-stats"></div>
     </div>
   </section>
@@ -139,6 +137,11 @@
   </footer>
 
   <!-- Load order matters: data first, then the code that renders it -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="" />
+  </div>
+
   <script src="data.js"></script>
   <script src="render.js"></script>
   <script src="script.js"></script>

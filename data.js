@@ -5,7 +5,7 @@ const data = {
   surname: 'Intasuwan',
   title: 'Full Stack Developer & Backend Develope ',
   status: 'Available',
-  avatar: 'assets/profile.jpg',
+  avatar: 'assets/profile.png',
 
   // ---- Education ----
   university: 'Kasetsart University',
@@ -19,7 +19,7 @@ const data = {
 
   // ---- Quick stats ----
   favoriteSubjects: 'Programming, Database',
-  projectsCompleted: 10,
+  projectsCompleted: 11,
 
   // ---- Contact ----
   email: 'thanapol.in@ku.th',
@@ -88,19 +88,24 @@ const data = {
       id: '001',
       title: 'Computer Repair Shop Management Website',
       description: 'My first web development project, built as a final course submission. Focused on learning and applying web development fundamentals to create something genuinely usable.',
-      tags: ['JavaScript', 'HTML', 'CSS', 'REST API', 'Node.js', 'MySQL']
+      tags: ['JavaScript', 'HTML', 'CSS', 'REST API', 'Node.js', 'MySQL'],
+      link: 'https://github.com/Bestzxc/241-project',
+      image: 'assets/001.png'
     },
     {
       id: '002',
       title: 'Monkey Fruit Collector Game',
       description: 'A simple collecting-style game where the player takes on the role of a monkey, gathering fruit to score points while dodging pursuit from hunters — adding challenge and excitement to the gameplay.',
-      tags: ['C++', 'Unity Hub']
+      tags: ['C++', 'Unity Hub'],
+      image: 'assets/002.png'
     },
     {
       id: '003',
       title: 'Tutor Booking Mobile App',
       description: 'A mobile application connecting students with tutors. Users can conveniently search for and choose tutors that fit their needs, with a system that makes contact and scheduling fast and efficient.',
-      tags: ['Dart', 'Flutter', 'Firebase']
+      tags: ['Dart', 'Flutter', 'Firebase'],
+      link: 'https://github.com/Bestzxc/flutter-project',
+      image: 'assets/003.png'
     },
     {
       id: '004',
@@ -112,37 +117,55 @@ const data = {
       id: '005',
       title: 'IoT Project (Kitchen Environment Monitoring System)',
       description: 'Developed an IoT system to monitor the kitchen environment, using sensors to collect data and send it to the cloud for efficient analysis and display, with alerts triggered when abnormal readings are detected.',
-      tags: ['IOT', 'C++', 'Dart', 'Flutter', 'REST API', 'MQTT', 'Firebase']
+      tags: ['IOT', 'C++', 'Dart', 'Flutter', 'REST API', 'MQTT', 'Firebase'],
+      link: 'https://github.com/Bestzxc/IoT-Project-Kitchen-Environment-Monitoring-System-',
+      image: 'assets/005.png'
     },
     {
       id: '006',
       title: 'SA Project Development (Schedule Management Website)',
       description: 'A website for managing schedules, where users can add, edit, and organize timetables systematically — helping make planning and task tracking more efficient.',
-      tags: ['JavaScript', 'HTML', 'CSS', 'Firebase']
+      tags: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
+      link: 'https://github.com/Bestzxc/SA-project-ActivityPlanner',
+      image: 'assets/006.png'
     },
     {
       id: '007',
       title: 'Vending Machine Simulation Website',
       description: 'A simulated vending machine website where users can select products and place orders in a realistic way, built as practice for system development and data management.',
-      tags: ['JavaScript', 'HTML', 'CSS', 'Firebase']
+      tags: ['JavaScript', 'HTML', 'CSS', 'Firebase'],
+      link: 'https://github.com/Bestzxc/web-vending',
+      image: 'assets/007.png'
     },
     {
       id: '008',
       title: 'Concert Ticket Booking App Design',
       description: 'A UI/UX design for a concert ticket booking app, focused on letting users search, select, and book tickets quickly and conveniently.',
-      tags: ['Design', 'Figma']
+      tags: ['Design', 'Figma'],
+      image: 'assets/008.png'
     },
     {
       id: '009',
       title: 'Network Survey & Design at Mahidol University',
       description: 'Conducted a survey and design of the network infrastructure at Mahidol University, analyzing usage patterns and designing an efficient network structure with full coverage and stable performance.',
-      tags: ['Survey', 'Networking']
+      tags: ['Survey', 'Networking'],
+      image: 'assets/009.png'
     },
     {
       id: '010',
       title: 'Fleet Management System',
       description: 'Developed a web-based fleet management system for managing vehicle information and monitoring fleet operations. Designed the user interface with React and integrated REST APIs to handle data communication with the backend and SQL database.',
-      tags: ['JavaScript', 'React', 'React', 'REST API', 'HTML', 'CSS', 'SQL']
+      tags: ['JavaScript', 'React', 'React', 'REST API', 'HTML', 'CSS', 'SQL'],
+      link: 'https://github.com/Bestzxc/Fleet_management',
+      image: 'assets/010.png'
+    },
+    {
+      id: '011',
+      title: 'Nationwide Flood Risk Prediction Pipeline',
+      description: 'An automated data pipeline that pulls 7-day rainfall forecasts for all 77 Thai provinces from the Thai Meteorological Department API via Airflow DAGs, loads them into PostgreSQL, and trains a machine learning model that retrains daily to predict flood risk levels. Predictions are served through a FastAPI service (with rule-based fallback) and visualized on an interactive nationwide risk map.',
+      tags: ['Python', 'Apache Airflow', 'PostgreSQL', 'FastAPI', 'Scikit-learn', 'Docker'],
+      link: 'https://github.com/Bestzxc/LM-datapipeline-rain',
+      image: 'assets/011.png'
     }
   ],
 

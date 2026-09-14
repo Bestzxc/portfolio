@@ -10,10 +10,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // About Me
   document.getElementById('about-list').innerHTML = `
-    <li><strong>Background:</strong> ${data.aboutBackground}</li>
-    <li><strong>Approach:</strong> ${data.aboutApproach}</li>
-    <li><strong>Priorities:</strong> ${data.aboutPriorities}</li>
-    <li><strong>Growth:</strong> ${data.aboutGrowth}</li>
+    <div class="about-card">
+      <span class="about-card-label">Background</span>
+      <p class="about-card-text">${data.aboutBackground}</p>
+    </div>
+    <div class="about-card">
+      <span class="about-card-label">Approach</span>
+      <p class="about-card-text">${data.aboutApproach}</p>
+    </div>
+    <div class="about-card">
+      <span class="about-card-label">Priorities</span>
+      <p class="about-card-text">${data.aboutPriorities}</p>
+    </div>
+    <div class="about-card">
+      <span class="about-card-label">Growth</span>
+      <p class="about-card-text">${data.aboutGrowth}</p>
+    </div>
   `;
 
   // Quick stats
@@ -103,11 +115,21 @@ document.addEventListener('DOMContentLoaded', () => {
     const div = document.createElement('div');
     div.className = 'project-card';
     const tags = project.tags.map(t => `<span class="tag">${t}</span>`).join('');
+    const link = project.link
+      ? `<a href="${project.link}" target="_blank" rel="noopener" class="project-link">View on GitHub <span class="project-arrow">&#8594;</span></a>`
+      : '';
+    const image = project.image
+      ? `<img class="project-image" src="${project.image}" alt="${project.title}" loading="lazy" />`
+      : '';
     div.innerHTML = `
-      <div class="project-num">${project.id}</div>
-      <h3 class="project-title">${project.title}</h3>
-      <p class="project-desc">${project.description}</p>
-      <div class="project-tags">${tags}</div>
+      <div class="project-content">
+        <div class="project-num">${project.id}</div>
+        <h3 class="project-title">${project.title}</h3>
+        <p class="project-desc">${project.description}</p>
+        <div class="project-tags">${tags}</div>
+        ${link}
+      </div>
+      ${image}
     `;
     projectsGrid.appendChild(div);
   });

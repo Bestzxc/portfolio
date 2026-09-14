@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  document.querySelectorAll('a, button, .project-card, .stat-item').forEach(el => {
+  document.querySelectorAll('a, button, .project-card, .stat-item, .project-image').forEach(el => {
     el.addEventListener('mouseenter', () => {
       cursor.style.width  = '16px';
       cursor.style.height = '16px';
@@ -65,15 +65,34 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let isThrottled = false;
 
+    const releaseThrottle = () => {
+      normalizeScroll();
+      isThrottled = false;
+    };
+
+    // Wait for the smooth-scroll animation to actually finish before
+    // normalizing/unlocking — normalizing mid-animation is what caused
+    // the visible "snap back to the first card" glitch on fast clicks.
+    let scrollEndTimer = null;
+    const scheduleReleaseFallback = () => {
+      clearTimeout(scrollEndTimer);
+      scrollEndTimer = setTimeout(releaseThrottle, 500);
+    };
+
+    if ('onscrollend' in window) {
+      track.addEventListener('scrollend', () => {
+        if (isThrottled) releaseThrottle();
+      });
+    }
+
     const slide = direction => {
       if (isThrottled) return;
       isThrottled = true;
       const target = track.scrollLeft + direction * cardWidth();
       track.scrollTo({ left: target, behavior: 'smooth' });
-      setTimeout(() => {
-        normalizeScroll();
-        isThrottled = false;
-      }, 300);
+      // Fallback for browsers without the 'scrollend' event — scrollend
+      // (when supported) will usually release the throttle sooner than this.
+      scheduleReleaseFallback();
     };
 
     prev.addEventListener('click', () => { slide(-1); restartAutoplay(); });
@@ -183,5 +202,37 @@ document.addEventListener('DOMContentLoaded', () => {
   }, { threshold: 0.3 });
 
   document.querySelectorAll('.skills-grid').forEach(el => skillObserver.observe(el));
+
+  /* ── PROJECT IMAGE LIGHTBOX ── */
+  (function() {
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const closeBtn = document.getElementById('lightboxClose');
+    if (!lightbox || !lightboxImg || !closeBtn) return;
+
+    const open = src => {
+      lightboxImg.src = src;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    };
+
+    const close = () => {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    document.addEventListener('click', e => {
+      const img = e.target.closest('.project-image');
+      if (img) open(img.src);
+    });
+
+    closeBtn.addEventListener('click', close);
+    lightbox.addEventListener('click', e => {
+      if (e.target === lightbox) close();
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') close();
+    });
+  })();
 
 });
