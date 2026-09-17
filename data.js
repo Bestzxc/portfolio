@@ -53,7 +53,7 @@ const data = {
 
   spokenLanguages: [
     { name: 'Thai', level: 'Native' },
-    { name: 'English', level: null }
+    { name: 'English', level: 'Intermediate' }
   ],
 
   aiTools: [
@@ -80,6 +80,57 @@ const data = {
     {
       name: 'Stitch AI',
       uses: ['Helps design UI', 'Creates design concepts']
+    }
+  ],
+
+  certificates: [
+    {
+      title: 'Node.js (Intermediate)',
+      issuer: 'HackerRank',
+      date: 'Mar 2025',
+      certId: '4466BB1D28AD',
+      file: 'assets/certificates/nodejs_intermediate certificate.pdf',
+      image: 'assets/certificates/nodejs_intermediate.png'
+    },
+    {
+      title: 'JavaScript (Intermediate)',
+      issuer: 'HackerRank',
+      date: 'Mar 2025',
+      certId: '57970812FF91',
+      file: 'assets/certificates/javascript_intermediate certificate.pdf',
+      image: 'assets/certificates/javascript_intermediate.png'
+    },
+    {
+      title: 'Rest API (Intermediate)',
+      issuer: 'HackerRank',
+      date: 'Mar 2025',
+      certId: '6644E30EC308',
+      file: 'assets/certificates/rest_api_intermediate certificate.pdf',
+      image: 'assets/certificates/rest_api_intermediate.png'
+    },
+    {
+      title: 'SQL (Advanced)',
+      issuer: 'HackerRank',
+      date: 'Mar 2025',
+      certId: 'AC727390B412',
+      file: 'assets/certificates/sql_advanced certificate.pdf',
+      image: 'assets/certificates/sql_advanced.png'
+    },
+    {
+      title: 'CSS (Basic)',
+      issuer: 'HackerRank',
+      date: 'Mar 2025',
+      certId: '747BF61A80DD',
+      file: 'assets/certificates/css certificate.pdf',
+      image: 'assets/certificates/css.png'
+    },
+    {
+      title: 'Python (Basic)',
+      issuer: 'HackerRank',
+      date: 'Feb 2025',
+      certId: '5AAF36BE67F0',
+      file: 'assets/certificates/python_basic certificate .pdf',
+      image: 'assets/certificates/python_basic.png'
     }
   ],
 

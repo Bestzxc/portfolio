@@ -109,6 +109,20 @@ document.addEventListener('DOMContentLoaded', () => {
     skillsAi.appendChild(div);
   });
 
+  // Certificates
+  const certificatesGrid = document.getElementById('certificates-grid');
+  data.certificates.forEach(cert => {
+    const div = document.createElement('div');
+    div.className = 'cert-card';
+    div.innerHTML = `
+      <img class="project-image cert-image" src="${cert.image}" alt="${cert.title} certificate" loading="lazy" />
+      <div class="cert-issuer">${cert.issuer}</div>
+      <h3 class="cert-title">${cert.title}</h3>
+      <div class="cert-meta">Earned ${cert.date} · ID ${cert.certId}</div>
+    `;
+    certificatesGrid.appendChild(div);
+  });
+
   // Projects
   const projectsGrid = document.getElementById('projects-grid');
   data.projects.forEach(project => {

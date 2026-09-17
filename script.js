@@ -10,10 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
     my = e.clientY;
     cursor.style.left = mx + 'px';
     cursor.style.top  = my + 'px';
+    ring.style.left = mx + 'px';
+    ring.style.top  = my + 'px';
   });
 
 
-  document.querySelectorAll('a, button, .project-card, .stat-item, .project-image').forEach(el => {
+  document.querySelectorAll('a, button, .project-card, .stat-item, .project-image, .cert-card').forEach(el => {
     el.addEventListener('mouseenter', () => {
       cursor.style.width  = '16px';
       cursor.style.height = '16px';
